@@ -1,7 +1,7 @@
 # Техническое задание на вёрстку
 
 * Название сайта: NЁRDS
-* Домен: [Техномарт](http://rapt0p7.github.io/nerds/)
+* Домен: [NЁRDS](http://rapt0p7.github.io/nerds/)
 
 --
 
