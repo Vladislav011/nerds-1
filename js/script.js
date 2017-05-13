@@ -46,32 +46,32 @@ function initMap() {
   });
 }
 
-var feedback_btn = document.querySelector(".write-us");
+var feedbackBtn = document.querySelector(".write-us");
 var popup = document.querySelector(".modal-content");
-var feedback_close = document.querySelector(".feedback-close");
-var your_name = popup.querySelector("[name=your-name]");
+var feedbackClose = document.querySelector(".feedback-close");
+var yourName = popup.querySelector("[name=your-name]");
 var email = popup.querySelector("[name=email]");
 var form = popup.querySelector("form");
-var storage = localStorage.getItem("name", your_name.value);
+var storage = localStorage.getItem("name", yourName.value);
 
-feedback_btn.addEventListener("click", function(event) {
+feedbackBtn.addEventListener("click", function(event) {
 	event.preventDefault();
 	popup.classList.add("modal-content-show");
 	if (storage) {
-		your_name.value = storage;
+		yourName.value = storage;
 		email.focus();
 	} else {
-		your_name.focus();
+		yourName.focus();
 	}
 });
 
-feedback_close.addEventListener("click", function() {
+feedbackClose.addEventListener("click", function() {
 	event.preventDefault();
 	popup.classList.remove("modal-content-show");
 });
 
   form.addEventListener("submit", function(event) {
-    if (!your_name.value || !email.value) {
+    if (!yourName.value || !email.value) {
       event.preventDefault();
       popup.classList.remove("modal-error");
       setTimeout(function() {
